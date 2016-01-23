@@ -1,0 +1,3 @@
+#!/bin/bash -
+list_path='/usr/bin/bastionShell/list.txt'
+cat $list_path

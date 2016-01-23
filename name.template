@@ -1,0 +1,9 @@
+#!/bin/bash 
+listPath='/usr/bin/bastionShell'
+cd $listPath
+listFile='list.txt'
+ALL_NAME="$0"
+CON_NAME=`basename $ALL_NAME`
+echo $CON_NAME
+IPADDRESS=`awk "/$CON_NAME/" $listFile | awk '{print $2}'`
+ssh root@$IPADDRESS
